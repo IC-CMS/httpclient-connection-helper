@@ -63,10 +63,14 @@ workflows:
   build_and_test:
     jobs: 
       - build
-      - test
-  deploy:
-    jobs:   
+      - test:
+          requires:
+            - build
       - deploy:
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
+            - test
