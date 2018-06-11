@@ -39,3 +39,13 @@ jobs:
 
       # run tests!
       - run: mvn -s .circleci/.circleci.settings.xml test
+  deploy:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/repo
+    environment:
+      MAVEN_OPTS: -Xmx3200m
+    steps:
+      - checkout
+    - run: sed -i "s/BUILDNUMBER/$(date +%s)/g" pom.xml
+    - run: mvn -s .circleci/.circleci.settings.xml deploy -DskipTests
