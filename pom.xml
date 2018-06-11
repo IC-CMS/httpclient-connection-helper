@@ -6,7 +6,7 @@
 
     <groupId>cms.sre</groupId>
     <artifactId>httpclient-connection-helper</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.BUILDNUMBER</version>
     <parent>
         <groupId>cms.sre</groupId>
         <artifactId>spring-parent-pom</artifactId>
@@ -18,6 +18,11 @@
             <name>ic-cms-Maven</name>
             <url>https://api.bintray.com/maven/ic-cms/Maven/httpclient-connection-helper/;publish=1</url>
         </repository>
+        <snapshotRepository>
+            <id>bintray-ic-cms-Maven</id>
+            <name>ic-cms-Maven</name>
+            <url>https://api.bintray.com/maven/ic-cms/Maven/httpclient-connection-helper/;publish=1</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
