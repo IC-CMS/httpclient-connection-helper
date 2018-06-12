@@ -6,11 +6,12 @@ public class PathUtils {
     public static String getAbsolutePathForClasspathResource(String resource){
         String keyStoreLocation = ClassLoader.getSystemClassLoader()
                 .getResource(resource)
-                .getPath()
-                .replace('/', '\\');
+                .getPath();
+
 
         if(SystemUtils.IS_OS_WINDOWS){
-            keyStoreLocation = keyStoreLocation.substring(1);
+            keyStoreLocation = keyStoreLocation.substring(1)
+                    .replace('/', '\\');
         }
 
         return keyStoreLocation;
