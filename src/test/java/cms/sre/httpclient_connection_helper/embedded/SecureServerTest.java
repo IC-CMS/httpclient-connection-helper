@@ -2,13 +2,11 @@ package cms.sre.httpclient_connection_helper.embedded;
 
 import cms.sre.httpclient_connection_helper.HttpClientFactory;
 import cms.sre.httpclient_connection_helper.HttpClientParameters;
-import org.apache.commons.lang3.SystemUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
 import javax.net.ssl.SSLContext;
 import java.io.IOException;
-import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
