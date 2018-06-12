@@ -34,7 +34,7 @@ public class HttpClientFactory {
         return str != null && str.length() > 0;
     }
 
-    private static SSLContext sslContext(HttpClientParameters httpClientParameters) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, KeyManagementException, UnrecoverableKeyException {
+    public static SSLContext sslContext(HttpClientParameters httpClientParameters) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, KeyManagementException, UnrecoverableKeyException {
         File trustStore = null;
         if(isNotEmptyOrNull(httpClientParameters.getTrustStoreLocation()) && isNotEmptyOrNull(httpClientParameters.getTrustStorePassword())){
             trustStore = Paths.get(httpClientParameters.getTrustStoreLocation())
@@ -47,7 +47,7 @@ public class HttpClientFactory {
                     .toFile();
         }
 
-        SSLContext sslContext = null;
+        SSLContext sslContext = SSLContext.getDefault();
         if(keyStore != null || trustStore != null){
             SSLContextBuilder custom = SSLContexts.custom()
                     .setProtocol("TLSv1.2");
