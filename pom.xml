@@ -6,7 +6,7 @@
 
     <groupId>cms.sre</groupId>
     <artifactId>httpclient-connection-helper</artifactId>
-    <version>1.1.BUILDNUMBER</version>
+    <version>1.2.BUILDNUMBER</version>
     <parent>
         <groupId>cms.sre</groupId>
         <artifactId>spring-parent-pom</artifactId>
@@ -28,6 +28,15 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.nanohttpd</groupId>
+            <artifactId>nanohttpd</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
     <build>
