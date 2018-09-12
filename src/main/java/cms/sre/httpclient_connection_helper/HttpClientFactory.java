@@ -1,6 +1,5 @@
 package cms.sre.httpclient_connection_helper;
 
-import javafx.scene.shape.Path;
 import org.apache.http.client.HttpClient;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.HttpClientConnectionManager;
